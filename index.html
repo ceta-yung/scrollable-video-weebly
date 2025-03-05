@@ -9,10 +9,11 @@
         /* 讓影片區塊自動調整大小 */
         .scrollable-video {
             width: 100%; /* 讓影片區塊自適應視窗 */
-            max-width: 95vw; /* 不超出視窗寬度 */
+            max-width: 100%; /* 不超出視窗寬度 */
             height: auto;
             aspect-ratio: 16 / 9; /* 保持 16:9 比例 */
             margin: 0px auto; /* 置中 */
+            overflow-x: hidden;
         }
 
         /* 確保內部內容不影響滾動效果 */
@@ -39,6 +40,13 @@
         .scrollable-video .draft-link {
             color: red;
             text-decoration: underline;
+        }
+        
+        body {
+            overflow-x: hidden; /* 確保整個頁面不會有水平捲動 */
+            margin: 0; /* 避免 body 預設 margin 影響 */
+            padding: 0;
+            box-sizing: border-box;
         }
     </style>
 </head>
