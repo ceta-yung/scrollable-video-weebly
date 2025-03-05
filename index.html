@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滾動式影片嵌入 Weebly</title>
+
+    <style>
+        /* 自訂 CSS - 影響所有滾動式影片 */
+        .scrollable-video {
+            max-width: 800px; /* 控制最大寬度 */
+            margin: 20px auto; /* 置中 */
+        }
+        .scrollable-video .section {
+            background-color: pink; /* 自訂區塊背景色 */
+        }
+        .scrollable-video .draft-image-desc {
+            font-size: 14px;
+            color: gray;
+        }
+        .scrollable-video .draft-blockquote {
+            font-style: italic;
+            border-left: 3px solid gray;
+            padding-left: 10px;
+        }
+        .scrollable-video .draft-header-two h2 {
+            font-size: 24px;
+            color: darkblue;
+        }
+        .scrollable-video .draft-link {
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">滾動式影片測試</h1>
+
+    <div id="jmbgf">
+        <script>
+            (function() {
+                var namespace = '@story-telling-reporter/react-embed-code-generator@2.1.2';
+                var pkg = 'scrollable-video';
+                if (typeof window !== 'undefined') {
+                    if (!window.hasOwnProperty(namespace)) {
+                        window[namespace] = {};
+                    }
+                    if (!window[namespace].hasOwnProperty(pkg)) {
+                        window[namespace][pkg] = [];
+                    }
+                    if (Array.isArray(window[namespace][pkg])) {
+                        var data = {
+                            "video": {
+                                "src": "https://lab-storytelling-storage.twreporter.org/files/c-a-1-Grz7vCTN3BT5WnXgjY.mp4",
+                                "mobileSrc": "",
+                                "duration": 5.0163
+                            },
+                            "captions": [],
+                            "darkMode": false,
+                            "secondsPer100vh": 1.7,
+                            "uuid": "8039ca0b-ee30-4ea9-8ad6-f1f8cd1eadb8"
+                        };
+                        window[namespace][pkg].push(data);
+                    }
+                }
+            })();
+        </script>
+
+        <div id="8039ca0b-ee30-4ea9-8ad6-f1f8cd1eadb8" class="scrollable-video">
+        </div>
+
+        <script type="text/javascript" defer crossorigin src="https://cdn.jsdelivr.net/npm/@story-telling-reporter/react-embed-code-generator@2.1.2/dist/scrollable-video.js"></script>
+    </div>
+
+</body>
+</html>
