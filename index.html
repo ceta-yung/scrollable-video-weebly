@@ -7,19 +7,22 @@
 
     <style>
         /* 自訂 CSS - 影響所有滾動式影片 */
+        /* 自動適應視窗大小，並允許滾動式影片正常運作 */
         .scrollable-video {
-            width: 100vw; /* 設定為視窗寬度 */
+            width: 100vw;  /* 設定為視窗寬度 */
             height: 100vh; /* 設定為視窗高度 */
-            max-width: 100%; /* 防止超出邊界 */
-            max-height: 100%; /* 防止超出邊界 */
-            margin: 0; /* 移除置中 */
-            padding: 0; /* 確保沒有內邊距 */
-            position: absolute; /* 固定位置 */
-            top: 0;
-            left: 0;
+            margin: 0;     /* 移除置中對齊 */
+            padding: 0;
+            overflow: hidden; /* 避免影片區塊溢出 */
         }
         
-        /* 內部樣式 */
+        /* 確保影片內容也能正常適應 */
+        .scrollable-video > div {
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* 保留滾動式影片的自訂樣式 */
         .scrollable-video .section {
             background-color: pink; /* 自訂區塊背景色 */
         }
