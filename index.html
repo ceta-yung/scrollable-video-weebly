@@ -8,25 +8,38 @@
     <style>
         /* 自訂 CSS - 影響所有滾動式影片 */
         .scrollable-video {
-            max-width: 800px; /* 控制最大寬度 */
-            margin: 0px auto; /* 置中 */
+            width: 100vw; /* 設定為視窗寬度 */
+            height: 100vh; /* 設定為視窗高度 */
+            max-width: 100%; /* 防止超出邊界 */
+            max-height: 100%; /* 防止超出邊界 */
+            margin: 0; /* 移除置中 */
+            padding: 0; /* 確保沒有內邊距 */
+            position: absolute; /* 固定位置 */
+            top: 0;
+            left: 0;
         }
+        
+        /* 內部樣式 */
         .scrollable-video .section {
             background-color: pink; /* 自訂區塊背景色 */
         }
+        
         .scrollable-video .draft-image-desc {
             font-size: 14px;
             color: gray;
         }
+        
         .scrollable-video .draft-blockquote {
             font-style: italic;
             border-left: 3px solid gray;
             padding-left: 10px;
         }
+        
         .scrollable-video .draft-header-two h2 {
             font-size: 24px;
             color: darkblue;
         }
+        
         .scrollable-video .draft-link {
             color: red;
             text-decoration: underline;
@@ -57,7 +70,7 @@
                             },
                             "captions": [],
                             "darkMode": false,
-                            "secondsPer100vh": 1.7,
+                            "secondsPer100vh": 1.5,
                             "uuid": "8039ca0b-ee30-4ea9-8ad6-f1f8cd1eadb8"
                         };
                         window[namespace][pkg].push(data);
